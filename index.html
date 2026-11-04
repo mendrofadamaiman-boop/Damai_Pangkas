@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pangkas Rambut Damaiman Mendrofa – Cukur Rapi, Booking Mudah</title>
+  <meta name="description" content="Jasa pangkas rambut untuk anak, dewasa, dan orang tua. Lihat tarif, jadwal buka, dan booking langsung lewat WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  <header class="nav">
+    <a class="logo" href="#beranda">Pangkas Rambut <span>Damaiman Mendrofa</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false">Menu</button>
+    <nav id="menu" aria-label="Navigasi utama">
+      <a href="#tentang">Tentang</a>
+      <a href="#pengalaman">Pengalaman</a>
+      <a href="#tarif">Tarif</a>
+      <a href="#jadwal">Jadwal</a>
+      <a class="nav-cta" href="#booking">Booking</a>
+    </nav>
+  </header>
+ 
+  <main>
+    <!-- BERANDA -->
+    <section class="hero" id="beranda">
+      <div class="hero-inner">
+        <p class="status" id="status" aria-live="polite">Memeriksa jadwal…</p>
+        <h1>Potongan rapi, hasil yang bikin percaya diri.</h1>
+        <p class="lead">Layanan pangkas rambut untuk anak, dewasa, dan orang tua, plus rapikan kumis dan jenggot. Pilih jadwalmu di sini, konfirmasi langsung lewat WhatsApp.</p>
+        <div class="actions">
+          <a class="btn primary" href="#booking">Booking sekarang</a>
+          <a class="btn ghost" href="#tarif">Lihat tarif</a>
+        </div>
+      </div>
+      <div class="pole" aria-hidden="true"></div>
+    </section>
+ 
+    <!-- TENTANG -->
+    <section class="section" id="tentang">
+      <h2>Tentang saya</h2>
+      <div class="about">
+        <div class="photo" role="img" aria-label="Foto pemilik">
+            <img src="fotoprofil.jpeg" alt="Foto Damaiman mendrofa">
+          <!-- Ganti dengan: <img src="fotoprofil.jpeg" alt="Foto Damaiman mendrofa"> -->
+          <span>DM</span>
+        </div>
+        <div>
+          <p>Halo, saya <strong>Damaiman Mendrofa</strong>, tukang cukur yang melayani pelanggan dengan teliti dan ramah. Bagi saya, potong rambut bukan sekadar memendekkan rambut, tapi memastikan kamu pulang dengan penampilan yang pas dan nyaman.</p>
+          <p>Saya melayani semua usia, dari si kecil yang baru pertama kali dicukur sampai bapak-bapak yang sudah langganan bertahun-tahun.</p>
+          <dl class="facts">
+            <div><dt>Nama</dt><dd>Damaiman Mendrofa</dd></div>
+            <div><dt>Usia</dt><dd>19 tahun</dd></div>
+            <div><dt>Alamat</dt><dd>Jl. Nias tengah, Km, 21,5 hilizia lauru, kec. hiliserangkai</dd></div>
+            <div><dt>WhatsApp</dt><dd><a id="waLink" href="#">0851-4219-6892</a></dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- PENGALAMAN -->
+    <section class="section alt" id="pengalaman">
+      <h2>Pengalaman di bidang pangkas rambut</h2>
+      <ol class="timeline">
+        <li><span class="year">2022</span><div><h3>Mulai belajar cukur rambut</h3><p>Belajar dasar mencukur dari tukang cukur senior dan berlatih setiap hari.</p></div></li>
+        <li><span class="year">2023</span><div><h3>Mulai berani mengambil resiko </h3><p>Berani Melayani orang orang dalam bidang cukur rambut meskipun masih belum mahir.</p></div></li>
+        <li><span class="year">2024</span><div><h3>Mulai mempelajari teknik cukur</h3><p>Mendalami teknik fade hingga potongan potongan modren serta menyesuaikan model rambut ke bentuk wajah.</p></div></li>
+        <li><span class="year">2025</span><div><h3>Membuka usaha sendiri</h3><p>Walaupun tempat yang amat sederhana puji tuhan ratusan pelanggan sudah saya layani.</p></div></li>
+      </ol>
+      <ul class="points">
+        <li>Alat dibersihkan sebelum dipakai ke setiap pelanggan</li>
+        <li>Bisa menyesuaikan model dengan bentuk wajah dan kebutuhanmu</li>
+        <li>Sabar menangani anak-anak dan orang tua</li>
+      </ul>
+    </section>
+ 
+    <!-- TARIF -->
+    <section class="section" id="tarif">
+      <h2>Tarif cukur</h2>
+      <p class="note">Harga di bawah ini contoh, ubah sesuai t<code>script.js</code>.</p>
+      <div class="prices" id="prices"></div>
+    </section>
+ 
+    <!-- JADWAL -->
+    <section class="section alt" id="jadwal">
+      <h2>Jadwal buka</h2>
+      <table class="hours">
+        <caption class="sr">Jam buka Senin sampai Minggu</caption>
+        <thead class="sr"><tr><th>Hari</th><th>Jam</th></tr></thead>
+        <tbody id="hours"></tbody>
+      </table>
+    </section>
+ 
+    <!-- BOOKING -->
+    <section class="section" id="booking">
+      <h2>Atur jadwal cukurmu</h2>
+      <p class="note">Pilih layanan, tanggal, dan jam. Setelah menekan tombol, WhatsApp terbuka dengan pesan yang sudah terisi. Jadwal resmi setelah saya konfirmasi.</p>
+ 
+      <form id="bookingForm" class="form" novalidate>
+        <label>Nama kamu
+          <input type="text" id="nama" placeholder="Contoh: Budi" required>
+        </label>
+        <label>Layanan
+          <select id="layanan" required></select>
+        </label>
+        <label>Tanggal
+          <input type="date" id="tanggal" required>
+        </label>
+        <fieldset>
+          <legend>Jam</legend>
+          <div class="slots" id="slots"><p class="hint">Pilih tanggal dulu untuk melihat jam yang tersedia.</p></div>
+        </fieldset>
+        <p class="error" id="error" role="alert"></p>
+        <button class="btn primary big" type="submit">Kirim booking lewat WhatsApp</button>
+      </form>
+    </section>
+  </main>
+ 
+  <footer>
+    <p>© <span id="year"></span> Pangkas Rambut Damaiman Mendrofa · Jl. Nias tengah, Km, 21,5 hilizia lauru, kec.hiliserangkai</p>
+  </footer>
+ 
+  <a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Chat WhatsApp">WhatsApp</a>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
